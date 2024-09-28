@@ -1,0 +1,15 @@
+{
+  "name": "nyt",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "parcel build --public-url https://Gimple.github.io/new-york-times_clone src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel serve src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "2.12.0"
+  }
+}
