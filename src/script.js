@@ -59,7 +59,7 @@ searchButton.addEventListener("click", async () => {
     if (searchQuery) {
         try {
             const articles = await fetchNewsQuery(searchQuery);
-            displayBlogs(articles, false, true); 
+            displayBlogs(articles, false, true);
         } catch (error) {
             console.error("Error searching news", error);
         }
@@ -118,16 +118,16 @@ function displayBlogs(articles, isHomeJson = true, isSearchQuery = false) {
 
         let imageUrl;
         if (isHomeJson) {
-            imageUrl = article.multimedia && article.multimedia.length > 0 
-                ? article.multimedia[0].url 
+            imageUrl = article.multimedia && article.multimedia.length > 0
+                ? article.multimedia[0].url
                 : defaultImage;
         } else if (isSearchQuery) {
-            imageUrl = article.multimedia && article.multimedia[0] && article.multimedia[0].url 
-                ? `https://www.nytimes.com/${article.multimedia[0].url}` 
+            imageUrl = article.multimedia && article.multimedia[0] && article.multimedia[0].url
+                ? `https://www.nytimes.com/${article.multimedia[0].url}`
                 : defaultImage;
         } else {
-            imageUrl = article.multimedia && article.multimedia[0] && article.multimedia[0].url 
-                ? article.multimedia[0].url 
+            imageUrl = article.multimedia && article.multimedia[0] && article.multimedia[0].url
+                ? article.multimedia[0].url
                 : defaultImage;
         }
 
@@ -139,14 +139,14 @@ function displayBlogs(articles, isHomeJson = true, isSearchQuery = false) {
         img.alt = article.headline?.main || article.title || "No Title";
 
         const titleText = article.headline?.main || article.title || "No Title";
-        const title = document.createElement ("h2");
+        const title = document.createElement("h2");
         title.textContent = titleText.length > 40 ? `${titleText.slice(0, 40)}...` : titleText;
 
         const description = document.createElement("p");
-        description.textContent = article.abstract 
-            ? (article.abstract.length > 120 
-                ? `${article.abstract.slice(0, 120)}...` 
-                : article.abstract) 
+        description.textContent = article.abstract
+            ? (article.abstract.length > 120
+                ? `${article.abstract.slice(0, 120)}...`
+                : article.abstract)
             : "No Description";
 
         blogCard.appendChild(img);

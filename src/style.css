@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url("https://res.cloudinary.com/dnkistviz/image/upload/v1727438797/b-g-nyt_aaaj3m.jpg");
     background-size: cover;
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    background-position: center; 
-    min-height: 100vh; 
-    margin: 0; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
     font-family: 'Merriweather', serif;
     cursor: none;
 }
+
 body::before {
     content: '';
     position: fixed;
@@ -26,16 +27,18 @@ body::before {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: -1;
-    min-height: 100vh; 
-    margin: 0; 
+    min-height: 100vh;
+    margin: 0;
 }
-footer{
+
+footer {
     color: black;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     background: rgba(255, 255, 255, 0.5);
     font-size: large;
 }
-#NYT{
+
+#NYT {
     height: 1.2rem;
 }
 
@@ -48,14 +51,14 @@ footer{
     border-radius: 50%;
     pointer-events: none;
     box-shadow: 0 0 20px white,
-                0 0 60px white,
-                0 0 100px white;
+        0 0 60px white,
+        0 0 100px white;
     animation: colors 5s infinite;
     transform: translate(-50%, -50%);
     display: none;
 }
 
-.cursor:before{
+.cursor:before {
     content: '';
     position: absolute;
     background: white;
@@ -67,11 +70,12 @@ footer{
 }
 
 /*Global CSS */
-.obj-width{
+.obj-width {
     max-width: 1200px;
     margin: auto;
 }
-.cursor:before{
+
+.cursor:before {
     content: '';
     position: absolute;
     background: whitesmoke;
@@ -82,62 +86,70 @@ footer{
     border-radius: 50%;
 }
 
-nav{
-    background-color:transparent;
+nav {
+    background-color: transparent;
     backdrop-filter: blur(10px);
     position: relative;
     z-index: 1;
     box-shadow: 10px 10px 10px black;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.3rem 0;
 }
-.navbar .logo{
+
+.navbar .logo {
     color: white;
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 2.2rem;
     padding-left: 2rem;
 }
-@keyframes colors{
-    50%{
+
+@keyframes colors {
+    50% {
         color: white;
     }
-    50%{
+
+    50% {
         color: black;
     }
 }
-.logo{
+
+.logo {
     font-weight: bolder;
     color: whitesmoke;
     z-index: 999;
     text-shadow: 0 0 20px #BFA89A,
-                0 0 60px #BFA89A,
-                0 0 100px #BFA89A;
+        0 0 60px #BFA89A,
+        0 0 100px #BFA89A;
     animation: colors 5s infinite;
 }
-.logo:before{
+
+.logo:before {
     position: absolute;
     opacity: 0.2;
     transform: translate(-50%, -50%);
 }
-#search-input{
+
+#search-input {
     max-width: 400px;
     padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 18px;
     color: black;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     background: rgba(255, 255, 255, 0.5);
 }
-#search-button{
+
+#search-button {
     padding: 10px 20px;
     color: black;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     background: rgba(255, 255, 255, 0.5);
     border: none;
     font-size: 18px;
@@ -145,9 +157,10 @@ nav{
     border-radius: 5px;
     margin-left: 10px;
 }
+
 #category-filter-button {
     color: black;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     background: rgba(255, 255, 255, 0.5);
     padding: 10px 20px;
     border: none;
@@ -161,7 +174,7 @@ nav{
     width: 13.6rem;
     position: absolute;
     color: black;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     background: rgba(255, 255, 255, 0.5);
     border: 2px solid black;
     border-radius: 0px 0px 10px 10px;
@@ -169,14 +182,14 @@ nav{
     display: none;
 }
 
-#category-filter-list  {
+#category-filter-list {
     margin-bottom: 10px;
 }
 
 #category-filter-list button {
     width: 100%;
     color: black;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     background: rgba(255, 255, 255, 0.5);
     border: none;
     font-size: 18px;
@@ -188,20 +201,21 @@ nav{
     background-color: #ccc;
 }
 
-#category-filter-button:hover + #category-filter-list {
+#category-filter-button:hover+#category-filter-list {
     display: block;
 }
 
-#blog-container{
+#blog-container {
     padding: 3rem 0;
     display: flex;
     justify-content: space-evenly;
     align-items: stretch;
     flex-wrap: wrap;
 }
-.blog-card{
+
+.blog-card {
     width: 67%;
-    background-color:transparent;
+    background-color: transparent;
     backdrop-filter: blur(10px);
     box-shadow: 10px 10px 10px black;
     border: 2px solid;
@@ -211,23 +225,26 @@ nav{
     margin: 1rem;
     transition: all ease-in-out 1s;
 }
-.blog-card:hover{
-    box-shadow: 10px 10px 10px black;
-    width:30%;
+
+.blog-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
     margin: 0.5rem;
 }
-.blog-card img{
+
+.blog-card img {
     width: 100%;
     height: 280px;
-    object-fit:cover;
+    object-fit: cover;
     border: 2px solid;
     border-color: black;
     border-radius: 5px;
     margin-bottom: 10px;
 }
-.blog-card h2{
+
+.blog-card h2 {
     color: black;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     font-size: 1.7rem;
@@ -235,9 +252,9 @@ nav{
     text-align: center;
 }
 
-.blog-card p{
+.blog-card p {
     color: black;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     font-size: 1.2rem;
@@ -246,84 +263,103 @@ nav{
     text-align: center;
 }
 
-@media(max-width:1000px){
+@media(max-width:1000px) {
     .blog-card {
         width: 80%;
     }
-    .blog-card:hover{
+
+    .blog-card:hover {
         width: 50%;
         margin: 1rem;
     }
 }
 
-@media (max-width: 790px){
+@media (max-width: 790px) {
     nav {
         padding: 0 20px;
     }
-    .navbar{
+
+    .navbar {
         flex-wrap: wrap;
         flex-direction: column;
     }
+
     .navbar .logo {
         padding-left: 1px;
         padding-right: 1px;
         margin-left: 50px;
         margin-right: 1px;
     }
+
     .logo {
         font-weight: bold;
         font-size: 5rem;
         padding-bottom: 10px;
     }
-    #search-button{
+
+    #search-button {
         padding: 5px 5px;
     }
+
     #search-input {
-        padding: 4px 4px ;
+        padding: 4px 4px;
     }
+
     .blog-card {
         width: 90%;
     }
-    .blog-card:hover{
+
+    .blog-card:hover {
         width: 80%;
         margin: 1rem;
     }
-    footer{
+
+    footer {
         font-size: large;
     }
-    #NYT{
+
+    #NYT {
         height: 0.8rem;
     }
+
     #category-filter-button {
         padding: 5px 5px;
         font-size: 18px;
     }
+
     #category-filter-list {
         font-size: 12px;
         width: 12.9rem;
     }
 }
-@media (max-width:615px){
+
+@media (max-width:615px) {
     #search-input {
         max-width: 120px;
     }
+
     .logo {
         font-weight: bold;
     }
+
     .blog-card {
         width: 80%;
     }
-    .blog-card:hover{
+
+    .blog-card:hover {
         width: 70%;
         margin: 1rem;
     }
+
     #category-filter-button {
         font-size: 18px;
     }
+
     #category-filter-list {
         font-size: 14px;
         width: 7.4rem;
     }
+
     .navbar .logo {
         padding-left: 1px;
         padding-right: 1px;
